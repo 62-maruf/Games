@@ -1,0 +1,80 @@
+<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Light comes from the upper left; gradients are shared by every piece. -->
+    <linearGradient id="gw" gradientUnits="userSpaceOnUse" x1="16" y1="0" x2="84" y2="0">
+      <stop offset="0" stop-color="#ffffff"/><stop offset=".4" stop-color="#f1f1f1"/><stop offset="1" stop-color="#a9a9a9"/>
+    </linearGradient>
+    <linearGradient id="gb" gradientUnits="userSpaceOnUse" x1="16" y1="0" x2="84" y2="0">
+      <stop offset="0" stop-color="#6e6e6e"/><stop offset=".35" stop-color="#2c2c2c"/><stop offset="1" stop-color="#050505"/>
+    </linearGradient>
+    <!-- Soft glossy bevel: gives the flat shapes a turned-wood / polished look. Applied per piece in app.js. -->
+    <filter id="bevel" x="-5%" y="-5%" width="110%" height="110%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2.2" result="height"/>
+      <feSpecularLighting in="height" surfaceScale="5" specularConstant=".9" specularExponent="22" lighting-color="#fff" result="gloss">
+        <feDistantLight azimuth="225" elevation="48"/>
+      </feSpecularLighting>
+      <feComposite in="gloss" in2="SourceAlpha" operator="in" result="shine"/>
+      <feComposite in="SourceGraphic" in2="shine" operator="arithmetic" k1="0" k2="1" k3=".55" k4="0"/>
+    </filter>
+    <symbol id="base" viewBox="0 0 100 100">
+      <rect x="20" y="83" width="60" height="9" rx="3.5"/>
+      <rect x="26" y="76" width="48" height="9" rx="3.5"/>
+    </symbol>
+  </defs>
+
+  <symbol id="i-gear" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="3"/>
+    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+  </symbol>
+
+  <symbol id="p" viewBox="0 0 100 100">
+    <use href="#base"/>
+    <path d="M37 78C40 66 44 60 43 53H57C56 60 60 66 63 78Z"/>
+    <rect x="35" y="46" width="30" height="8" rx="4"/>
+    <circle cx="50" cy="34" r="12"/>
+    <path d="M42 30Q45 25 50 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="r" viewBox="0 0 100 100">
+    <use href="#base"/>
+    <path d="M35 46H65L69 78H31Z"/>
+    <path d="M31 46H69V40H31Z"/>
+    <path d="M29 22H38V30H44V22H56V30H62V22H71V42H29Z"/>
+    <path d="M35 36H65" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="n" viewBox="0 0 100 100">
+    <use href="#base"/>
+    <path d="M27 78C27 66 30 58 40 51C34 53 28 57 23 55C18 52 17 47 21 43C26 37 32 33 36 26L37 13L46 21C62 19 76 34 78 56C79 66 77 72 75 78Z"/>
+    <path d="M47 29C58 32 66 44 66 62" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+    <circle cx="38" cy="34" r="2.4" fill="currentColor" stroke="none"/>
+    <path d="M22 47L26 50" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="b" viewBox="0 0 100 100">
+    <use href="#base"/>
+    <path d="M40 64H60L66 78H34Z"/>
+    <rect x="35" y="57" width="30" height="8" rx="4"/>
+    <path d="M50 17C63 26 69 38 63 49C61 52 59 54 59 58H41C41 54 39 52 37 49C31 38 37 26 50 17Z"/>
+    <circle cx="50" cy="13" r="5"/>
+    <path d="M44 31L56 43" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="q" viewBox="0 0 100 100">
+    <use href="#base"/>
+    <path d="M38 62C38 68 32 72 29 78H71C68 72 62 68 62 62Z"/>
+    <rect x="32" y="55" width="36" height="8" rx="4"/>
+    <path d="M26 57L21 28L31 41L36 21L43 39L50 17L57 39L64 21L69 41L79 28L74 57Z"/>
+    <circle cx="21" cy="26" r="3.8"/><circle cx="36" cy="18" r="3.8"/><circle cx="50" cy="14" r="3.8"/><circle cx="64" cy="18" r="3.8"/><circle cx="79" cy="26" r="3.8"/>
+    <path d="M32 50H68" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="k" viewBox="0 0 100 100">
+    <use href="#base"/>
+    <path d="M38 62C38 68 32 72 29 78H71C68 72 62 68 62 62Z"/>
+    <rect x="31" y="55" width="38" height="8" rx="4"/>
+    <path d="M25 57C20 45 27 32 50 29C73 32 80 45 75 57Z"/>
+    <path d="M47 5H53V10H59V16H53V25H47V16H41V10H47Z"/>
+    <path d="M33 46C42 39 58 39 67 46" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+  </symbol>
+</svg>
